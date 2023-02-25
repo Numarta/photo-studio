@@ -9,7 +9,7 @@
 
 **Ссылка на сайт**
 
-* [Это ссылка на мой сайт в GitHub Pages](https://numarta.github.io/)
+* [Это ссылка на мой сайт в GitHub Pages](https://numarta.github.io/photo-studio/)
 
 **Описание**
 
@@ -21,5 +21,5 @@
 Все проверено на ошибки.
 
 Мой сайт:
-https://numarta.github.io/
+https://numarta.github.io/photo-studio/
 http://moder.hhos.ru/index.html
