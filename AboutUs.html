@@ -1,0 +1,188 @@
+<?php
+session_start();
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>aboutUs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/swiper/package/css/swiper.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+</head>
+
+<body>
+   <div class="container1">
+     
+    <nav class="main_nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-lg-3">
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" width="200px" alt="">
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 vm">
+                </div> 
+                <div class="col-6 col-lg-3 vm">
+                    <a href="tel:" class="tel tablet_left">
+                        8 (8452) 34 - 93 - 03
+                    </a>
+                </div>
+                <div class="col-6 col-lg-2 vm nav_panel tablet_right ">
+             <button type="button" class="btn btn-outline-danger" onclick="location.href = 'test2/logout.php'"><?php if($_SESSION['role']=='user' || $_SESSION['role']=='admin'){ echo 'Выйти'; } else { echo 'Войти!'; } ?></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="bottom_nav">
+        <div class="container">
+            <ul class="row_grid tablet_block">
+                <li class="mobile_nav">
+                    <a href="#"><i class="fas fa-bars"></i> МЕню</a>
+                </li>
+            </ul>
+
+            <ul class="row_grid tablet_none hor_nav">
+                <li><a href="index.html">Главная</a></li>
+                 <?php if($_SESSION['role']=='user' || $_SESSION['role']=='admin') {  ?>
+                <li><a href="#">Заказать онлайн</a>
+                    <ul class="sub_menu">
+                        <li><a href="print.html">Печать фотографий</a></li>
+                        <li><a href="mugFoto.html">Кружка с фото</a></li>
+                    </ul>
+                </li>
+                <?php }  ?>
+               <li><a href="#">Возможности</a>
+                <ul class="sub_menu">
+                        <li><a href="photodoc.html">Фото на документы</a></li>
+                        <li><a href="holst.html">Печать на холсте</a></li>
+                        <li><a href="caset.html">Оцифровка видеокасет</a></li>
+                        <li><a href="uslug.html">Повседневные услуги</a></li>
+                    </ul>
+                    </li>
+                <li><a href="AboutUs.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                 <?php if($_SESSION['role']=='admin') {  ?>
+                <li><a href="meneger.html">Заказы</a></li>
+                 <?php }  ?>
+            </ul>
+        </div>
+    </nav>
+     <section class="sc_print">
+     <div class="container">
+    <div class="col-12">
+                    <p class="page-nav"><a href="index.html">Главная</a> > <a href="AboutUs.html"> О НАС</a></p>
+                </div>
+                <div class="col-lg-6 text_left">
+                   <h1> O НАС</h1>
+         </div>
+                </div>
+       </section>
+    <section class="sec aboutUs1">
+              
+        <div class="filter2"></div> 
+        
+        <div class="container">
+          
+                <div class="col-lg-6 text_left text_about">
+                    <p>Мы компания “Силуэт фото”, работаем на рынке с 2010 года в сфере фотоуслуг. Мы любим и умеем превращать цифровое в материальное, и мы любим то чем занимаемся. Сегодня многие хранят фотоснимки в цифровом виде - это скучно и неинтересно, в то время как создание вещей на их основе, которые можно подержать в руках – это творческий процесс создания вещественных доказательств вашей жизни. Мы как раз те, кто создает такие осязаемые фотопродукты.</p>
+                </div>
+            </div>
+        
+    </section>
+
+    <div class="sec aboutUs2">
+       <div class="container">
+            <div class="row_team">
+                <div class="col-lg-12">
+                    <h2>Наша Команда</h2>
+                </div>
+                <div class="col-lg-3 col-lg-12 text_center team">
+                <div class="col-lg-3 col-lg-12 text_center team1">
+                    <img src="images/AboutUs/team1.png" width="200px" alt="">
+                    <h5>Директор</h5>
+                    <p>Руслан Юрьевич</p>
+                </div>
+                <div class="col-lg-3 col-lg-12 text_center team1">
+                    <img src="images/AboutUs/team2.png" width="200px" alt="">
+                    <h5>Зам. Директора</h5>
+                    <p>Ариана Никитична</p>
+                </div>
+                <div class="col-lg-3 text_center team1">
+                    <img src="images/AboutUs/team3.png" alt="">
+                    <h5>Главный дизайнер</h5>
+                    <p>Анастасия</p>
+                </div>
+                <div class="col-lg-3 text_center team1">
+                    <img src="images/AboutUs/team4.png" alt="">
+                  <h5>Бухгалтер</h5>
+                    <p>Раиса Васильевна</p>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+    </div>
+    <div class="clr"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>ОСНОВНЫЕ РАЗДЕЛЫ</h2>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="AboutUs.html">О нас</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h2>ВАЖНО</h2>
+                    <ul>
+                        <li><a href="userAgreement.html">Пользовательское соглашение</a></li>
+                        <li><a href="policyOFconfid.html">Политика конфеденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 f_back">
+                    <h2>ОБРАТНАЯ СВЯЗЬ</h2>
+                    <ul>
+                        <li><a href="#">Задать вопрос <br> 8 (8452) 34 93 03 </a></li>
+                        
+                        <li><a href="#">Пожаловаться руководству <br> 8 (8452) 34 - 93 - 03</a></li>
+                        <li class="social"><a href="#">Мы в <br> социальных <br> сетях</a>
+
+                            <a href="#">
+                                <img src="images/icons/social/ok.png" alt="">
+                            </a>
+                            <a href="https://vk.com/ktmash">
+                                <img src="images/icons/social/vk.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/social/in.png" alt="">
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+ <script src="js/swiper/package/js/swiper.min.js"></script>
+ 
+
+    <!-- Initialize Swiper -->
+    <script src="js/script.min.js"></script>
+</body> </html>

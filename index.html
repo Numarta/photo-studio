@@ -1,0 +1,249 @@
+<?php
+session_start();
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>verstka 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/swiper/package/css/swiper.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+</head>
+
+<body>
+  
+    <nav class="main_nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-lg-3">
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" width="200px" alt="">
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 vm">
+                </div> 
+                <div class="col-6 col-lg-3 vm">
+                    <a href="tel:" class="tel tablet_left">
+                        8 (8452) 34 - 93 - 03
+                    </a>
+                </div>
+                <div class="col-6 col-lg-2 vm nav_panel tablet_right ">
+           <button type="button" class="btn btn-outline-danger" onclick="location.href = 'test2/logout.php'"><?php if($_SESSION['role']=='user' || $_SESSION['role']=='admin'){ echo 'Выйти'; } else { echo 'Войти!'; } ?></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="bottom_nav">
+        <div class="container">
+            <ul class="row_grid tablet_block">
+                <li class="mobile_nav">
+                    <a href="#"><i class="fas fa-bars"></i> МЕню</a>
+                </li>
+            </ul>
+
+            <ul class="row_grid tablet_none hor_nav">
+                <li><a href="index.html">Главная</a></li>
+                <?php if($_SESSION['role']=='user' || $_SESSION['role']=='admin') {  ?>
+                <li><a href="#">Заказать онлайн</a>
+                    <ul class="sub_menu">
+                        <li><a href="print.html">Печать фотографий</a></li>
+                        <li><a href="mugFoto.html">Кружка с фото</a></li>
+                    </ul>
+                </li>
+                <?php }  ?>
+                <li><a href="#">Возможности</a>
+                <ul class="sub_menu">
+                        <li><a href="photodoc.html">Фото на документы</a></li>
+                        <li><a href="holst.html">Печать на холсте</a></li>
+                        <li><a href="caset.html">Оцифровка видеокасет</a></li>
+                        <li><a href="uslug.html">Повседневные услуги</a></li>
+                    </ul>
+                    </li>
+                <li><a href="AboutUs.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                 <?php if($_SESSION['role']=='admin') {  ?>
+                <li><a href="meneger.html">Заказы</a></li>
+                 <?php }  ?>
+            </ul>
+        </div>
+    </nav>
+    <section class="sec sec1">
+        <div class="filter"></div>
+        <div class="filter"></div>
+        <div class="after">
+            <img src="images/sec1/bottom.png" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6"></div>
+                <div class="col-lg-6 text_right">
+                    <h1>СКИДКИ НА ПЕЧАТЬ ФОТОГРАФИЙ</h1>
+                    <p>Скидка - 5% на 50 шт. <br> Скидка - 10% на 100 шт.<br> Скидка - 15% на 200 шт.</p>
+                    <p><i>*распространяется на печать только струйным методом</i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="sec sec2 sec_preim">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
+                </div>
+                <div class="col-lg-3 text_center">
+                    <img src="images/icons/time.png" alt="">
+                    <p>Чёткие сроки выполнения заказов</p>
+                </div>
+                <div class="col-lg-3 text_center">
+                    <img src="images/icons/kowel.png" alt="">
+                    <p>Удобная форма оплаты</p>
+                </div>
+                <div class="col-lg-3 text_center">
+                    <img src="images/icons/percent.png" alt="">
+                    <p>Скидки постоянным клиентам</p>
+                </div>
+                <div class="col-lg-3 text_center">
+                    <img src="images/icons/garbage.png" alt="">
+                    <p>On-Line Обслуживание</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="sec sec3 sec_photo">
+
+        <!-- белый туманчик -->
+        <div class="filter"></div>
+        <div class="filter"></div>
+        <div class="filter"></div>
+        <div class="filter"></div>
+        <div class="filter"></div>
+        <div class="filter"></div>
+        <div class="filter"></div>
+        <div class="filter"></div>
+        <!-- белый туманчик -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <h2>фОТОГРАФИИ</h2>
+                    <p>Празднование Дня рождения, свадьба, первая улыбка ребенка, путешествие. Напечатайте лучшие снимки значимых моментов — сохраните Ваши воспоминания.</p>
+                     <?php if($_SESSION['role']=='admin' || $_SESSION['role']=='user') {  ?>
+                 <a href="print.html">ПОДБРОБНЕЕ >></a>
+                 <?php }  else {?>
+                   <a href="Entrance.html">ПОДБРОБНЕЕ >></a>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sec sec4 sec_krujki">
+
+        <!-- белый туманчик -->
+        <div class="filter"></div>
+        <div class="filter"></div>
+        <div class="filter"></div>
+        <div class="filter"></div>
+        <!-- белый туманчик -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>КРУЖКИ</h2>
+                    <p>Сделайте из Вашего фото оригинальный подарок! Кружки с изображением – самый лучший подарок, совмещающий в себе практичность и уникальность.</p>
+                    <?php if($_SESSION['role']=='admin' || $_SESSION['role']=='user') {  ?>
+                 <a href="mugFoto.html">ПОДБРОБНЕЕ >></a>
+                 <?php }  else {?>
+                   <a href="Entrance.html">ПОДБРОБНЕЕ >></a>
+                    <?php } ?>
+                </div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sec sec5 sec_holst">
+
+        <!-- белый туманчик -->
+        <div class="filter"></div>
+        <!-- белый туманчик -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <h2>ФОТО НА ХОЛСТЕ</h2>
+                    <p>Напечатанное на холсте фото приобретёт неповторимый эффект живописного полотна. Галерейная натяжка на подрамник придаст завершённость работе, которая станет украшением Вашего интерьера.</p>
+                    <a href="holst.html">ПОДБРОБНЕЕ >></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>ОСНОВНЫЕ РАЗДЕЛЫ</h2>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="AboutUs.html">О нас</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h2>ВАЖНО</h2>
+                    <ul>
+                        <li><a href="userAgreement.html">Пользовательское соглашение</a></li>
+                        <li><a href="policyOFconfid.html">Политика конфеденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 f_back">
+                    <h2>ОБРАТНАЯ СВЯЗЬ</h2>
+                    <ul>
+                        <li><a href="#">Задать вопрос <br> 8 (8452) 34 93 03 </a></li>
+                        
+                        <li><a href="#">Пожаловаться руководству <br> 8 (8452) 34 - 93 - 03</a></li>
+                        <li class="social"><a href="#">Мы в <br> социальных <br> сетях</a>
+
+                            <a href="#">
+                                <img src="images/icons/social/ok.png" alt="">
+                            </a>
+                            <a href="https://vk.com/ktmash">
+                                <img src="images/icons/social/vk.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/social/in.png" alt="">
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+ 
+    <script src="js/swiper/package/js/swiper.min.js"></script>
+ 
+    <!-- Initialize Swiper -->
+    <script src="js/script.min.js"></script>
+</body></html>

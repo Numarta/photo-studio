@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>verstka 1</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/swiper/package/css/swiper.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+</head>
+
+<body>
+    
+    <!-- Modal data-toggle='modal' data-target='#exampleModal'-->
+    <div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Вход в личный кабинет</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body slide1">
+                    <input type="text" placeholder="E-mail или Телефон">
+                    <input type="password" placeholder="Пароль">
+
+                    <ul>
+                        <li class="social">
+                            <a href="#">
+                                <img src="images/icons/social/ok.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/social/vk.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/social/in.png" alt="">
+                            </a>
+
+                        </li>
+                    </ul>
+                    <button class="btn_primary">Войти</button> <span class="fpsswrd">Забыли пароль?</span>
+                </div>
+                <div class="modal-body" id="fpsswrd">
+                    <input type="text" placeholder="E-mail или Телефон">
+                    <p>Введите e-mail или номер телефона указанный при регистрации, и нажмите кнопку отправить, через несколько минут на Вашу электроную почту или телефон придет письмо/смс с паролем , этот пароль нужно ввести при входе в личный кабинет, изменить пароль вы сможете в вашем личном кабинете.</p>
+                    <button class="btn_primary">Войти</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="signup_form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="E-mail или Телефон">
+                    <input type="password" placeholder="Пароль">
+                    <p>
+                        Через несколько минут на указанный Вами телефон придет смс с кодом , этот код необходимо ввести в следующем дополнительном окне, изменить свои данные Вы сможете в вашем личном кабинете.
+                    </p>
+                    <button class="btn_primary">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main_nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-lg-3">
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" width="200px" alt="">
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4 vm">
+                   <!-- <div class="input-group mb-3 search_group">
+                        <input type="text" class="form-control" placeholder="Поиск">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2"><img src="images/icons/search.png" alt=""></span>
+                        </div>
+                    </div>-->
+                </div> 
+                <div class="col-6 col-lg-3 vm">
+                    <a href="tel:" class="tel tablet_left">
+                        8 (8452) 34 - 93 - 03
+                    </a>
+                </div>
+                <div class="col-6 col-lg-2 vm nav_panel tablet_right">
+                    <ul>
+                        <li class="el_basket active" tabindex="0" data-toggle="popover" data-html="true" data-placement="bottom" title="Корзина" data-content="<div class='basket_modal'><p>Корзина пустая</p><a href='#'>посмотреть</a></div>">
+                            <img src="images/icons/basket.png" alt="">
+                            <div class="circle"></div>
+                        </li>
+
+                        <li tabindex="0" data-toggle="popover" data-html="true" data-placement="bottom" title="<div class='pointer login_form'>Войти в личный кабинет</div>" data-content="<div class='login_modal'><a class='signup_form' href='#'><i>Зарегистрироваться</i></a></div>">
+                            <img src="images/icons/user.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="bottom_nav">
+        <div class="container">
+            <ul class="row_grid tablet_block">
+                <li class="mobile_nav">
+                    <a href="#"><i class="fas fa-bars"></i> МЕню</a>
+                </li>
+            </ul>
+
+            <ul class="row_grid tablet_none hor_nav">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#">Заказать онлайн</a>
+                    <ul class="sub_menu">
+                        <li><a href="#">Печать фотографий</a></li>
+                        <li><a href="#">Кружку с фото</a></li>
+                        <li><a href="#">Дизайн & Ретушь фото</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Фотоуслуги</a></li>
+                <li><a href="AboutUs.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="sec">
+       
+        
+        <div class="container">
+          
+                <div class="col-lg-12 ">
+                   <h1> Контакты </h1>
+                   <table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+        <td class="cell"><p class="redcolor"><b>Силуэт-фото "Северный"</b></p><p>г. Саратов, ул. Лебедева-Кумача 70 Е район рынка “Северного”<p></td>
+    <td class="cell-spacer"></td>
+      <td td class="cell">8 (8452) 70 - 24 - 55 <br> 1siluetfoto@mail.ru </td>
+      <td class="cell">Будние дни: 09:30 - 18:30 <br> Выходные: 09:30 - 17:00 </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+        <td class="cell"><p class="redcolor"><b>Силуэт-фото "Кольцо"</b></p> <p>г. Саратов, ул. Тархова, 2 конечная тролейбуса № 10, вход со стороны Тархова</p></td>
+        <td class="cell-spacer"></td>
+      <td class="cell">8 (8452) 70 - 24 - 66 <br> 3siluetfoto@mail.ru</td>
+      <td class="cell">Будние дни: 10:00 - 19:00 <br>Выходные: 10:00 - 17:00 </td>
+    <tr>
+      <th scope="row">3</th>
+      <td class="cell"><p class="redcolor"><b>Силуэт-фото "Жуковского"</b></p><p>г. Саратов, ул. Жуковского, 24 на против ТЦ “Рубин” </p></td>
+      <td class="cell-spacer"></td>
+      <td class="cell">8 (8452) 70 - 24 - 66 <br> 2siluetfoto@mail.ru</td>
+      <td class="cell">Будние дни: 10:00 - 19:00 <br>Выходные: 10:00 - 17:00 </td>
+    </tr>
+  
+   <?php include "code.php" ?>
+
+
+  </tbody>
+</table>
+                </div>
+            </div>
+        
+    </section> 
+
+<div class="clr"></div>    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>ОСНОВНЫЕ РАЗДЕЛЫ</h2>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Фотоуслуги</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h2>ВАЖНО</h2>
+                    <ul>
+                        <li><a href="#">Пользовательской соглашение</a></li>
+                        <li><a href="#">Политика конфеденциальности</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 f_back">
+                    <h2>ОБРАТНАЯ СВЯЗЬ</h2>
+                    <ul>
+                        <li><a href="#">Задать вопрос <br> 8 (8452) 34 93 03 </a></li>
+                        
+                        <li><a href="#">Пожаловаться руководству <br> 8 (8452) 34 - 93 - 03</a></li>
+                        <li class="social"><a href="#">Мы в <br> социальных <br> сетях</a>
+
+                            <a href="#">
+                                <img src="images/icons/social/ok.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/social/vk.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="images/icons/social/in.png" alt="">
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+    <script src="js/swiper/package/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="js/script.min.js"></script>
+</body> </html>
